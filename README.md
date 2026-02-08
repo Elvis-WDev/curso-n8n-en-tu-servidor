@@ -282,5 +282,3 @@ docker run --rm -v ./n8n_data:/data alpine chown -R 1000:1000 /data
 * **Síntoma:** Traefik falla al intentar bindear los puertos web.
 * **Causa:** Linux prohíbe a usuarios normales usar puertos < 1024.
 * **Solución:** Ejecutar como **root**: `sysctl net.ipv4.ip_unprivileged_port_start=0`.
-
-```
